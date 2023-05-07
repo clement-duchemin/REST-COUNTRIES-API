@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background: hsl(0, 0%, 98%);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 5% ;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.2);
+    background: white;
+}
+
+
+h1 {
+    font-size: 15px;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.fa-moon {
+    margin-right: 7px;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 5% 0 5%;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-bottom: 40px;
+}
+
+
+.search-bar {
+    width: 100%;
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.2);
+    padding: 8px 0;
+    border-radius: 5px;
+}
+
+.search-button {
+    flex-grow: 2;
+    width: 70px;
+}
+
+.fa-magnifying-glass {
+    padding:10px 0 10px 8px;
+    font-size: 15px;
+
+}
+
+input {
+    padding: 10px 0;
+    width: 70%;
+    border: none;
+}
+
+.dropDown {
+    display: flex;
+    box-shadow: 0 2px 8px rgb(0, 0, 0, 0.2);
+    width: 200px;
+    padding: 18px;
+    border-radius: 5px;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &__list {
+        box-shadow: 0 2px 8px rgb(0, 0, 0, 0.2);
+        margin-top: 5px;
+        border-radius: 5px;
+        width: 200px;
+        padding: 10px 0;
+        position: absolute;
+        background: white;
+        & p {
+            padding: 5px 0 5px 20px;
+        }
+    }
+}
+
+#dropdownMenu {
+    display: none;
+}
+
+
+.countries-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 45px;
+    margin-top: 40px;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.2);
+    width: 250px;
+    height: 370px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &__flag {
+        width: 250px;
+        height: 45%;
+
+        & img {
+           width: 100%;
+           height: 100%;
+           border-radius: 5px 5px 0 0;
+           object-fit: cover;
+        }       
+    }
+
+    &__data {
+        padding: 25px;
+
+        &--name {
+            padding: 15px 0;
+        }
+
+        & p {
+            padding-bottom: 10px;
+        }
+    }
+}
+
