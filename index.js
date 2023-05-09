@@ -3,6 +3,7 @@
 // }
 // myFunction()
 
+//Fecth datas from API
 const countriesElem = document.querySelector(".countries-section");
 
 async function getCountries() {
@@ -15,6 +16,7 @@ async function getCountries() {
 }
 getCountries()
 
+//Display datas
 function displayCountries(data) {
     const country = document.createElement("div")
     country.classList.add("country")
@@ -48,6 +50,18 @@ toggleButton.addEventListener('click', function() {
 });
 
 
+//hide dropdown when clicking outside of the trigger element
+document.addEventListener("click", function(event) {
+    const target = event.target;
+
+    if (target !== toggleButton && !dropdownMenu.contains(target)) {
+        dropdownMenu.style.display = 'none';
+    }
+})
+
+
+
+//Select countries by region in dropdown menu
 const region = document.querySelectorAll(".region");
 const regionName = document.getElementsByClassName("country__data--region");
 
@@ -64,3 +78,19 @@ region.forEach(element => {
         });
     })
 });
+
+//Select country in searchbar
+
+const search = document.querySelector("#search");
+const countryName = document.getElementsByClassName("country__data--name");
+
+search.addEventListener("input", function() {
+    console.log(search.value.toLowerCase());
+    Array.from(countryName).forEach(elem => {
+        if(elem.innerText.toLowerCase().includes(search.value.toLowerCase())) {
+            elem.parentElement.parentElement.style.display="block"
+        }else{
+            elem.parentElement.parentElement.style.display="none"
+        }
+    })
+})
