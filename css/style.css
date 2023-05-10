@@ -10,6 +10,10 @@ body {
   background: hsl(0, 0%, 98%);
 }
 
+.dark {
+  background: black !important;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,6 +38,10 @@ button {
 
 .fa-moon {
   margin-right: 7px;
+}
+
+.fas {
+  margin-right: 9px;
 }
 
 .search-section {

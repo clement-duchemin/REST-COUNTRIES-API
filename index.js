@@ -94,3 +94,17 @@ search.addEventListener("input", function() {
         }
     })
 })
+
+//Dark mode
+
+const toggle = document.querySelector(".toggle");
+const moon = document.querySelector(".moon");
+const body = document.querySelector("#body");
+const header = document.querySelector("#header");
+
+
+toggle.addEventListener("click", ()=> {
+    body.classList.toggle("dark")
+    header.classList.toggle("dark")
+    moon.classList.toggle("fas")
+})
