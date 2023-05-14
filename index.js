@@ -11,16 +11,18 @@ async function getCountries() {
     const response = await allCountries.json();
     console.log(response);
     response.forEach(element => {
-        displayCountries(element)
+        displayCountries(element);
     });
 }
 getCountries()
 
 //Display datas
 function displayCountries(data) {
-    const country = document.createElement("div")
-    country.classList.add("country")
-    country.innerHTML=`   <div class="country__flag">
+    const country = document.createElement("a");
+    country.classList.add("country");
+    country.href = `/country.html?name=${data.name.common}`;
+    country.innerHTML=`  
+    <div class="country__flag">
     <img src=${data.flags.svg} alt=${data.alt}>
 </div>
 <div class="country__data">
@@ -30,7 +32,7 @@ function displayCountries(data) {
     <p class="country__data--capital"><strong>Capital:</strong> ${data.capital}</p>
 </div>`
 countriesElem.appendChild(country)
-}
+};
 
 
 
@@ -101,10 +103,20 @@ const toggle = document.querySelector(".toggle");
 const moon = document.querySelector(".moon");
 const body = document.querySelector("#body");
 const header = document.querySelector("#header");
-
+const dropDown = document.getElementById('dropDown');
+const dropDown__list = document.querySelector(".dropDown__list");
+const searchBar = document.querySelector(".search-bar");
+const searchButton = document.querySelector(".search-button");
+const searchInput = document.querySelector(".search-input");
 
 toggle.addEventListener("click", ()=> {
     body.classList.toggle("dark")
-    header.classList.toggle("dark")
+    header.classList.toggle("dark-blue")
+    dropDown.classList.toggle("dark-blue")
+    dropDown__list.classList.toggle("dark-blue")
+    searchBar.classList.toggle("dark-blue")
+    searchButton.classList.toggle("dark-blue")
+    searchInput.classList.toggle("dark-blue")
     moon.classList.toggle("fas")
+    toggle.classList.toggle("white")
 })
