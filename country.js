@@ -37,7 +37,7 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
     const borderCountryTag = document.createElement('a');
     borderCountryTag.classList.add("btn");
     borderCountryTag.innerText = borderCountry.name.common;
-    borderCountryTag.href = `REST-COUNTRIES-API/country.html?name=${borderCountry.name.common}`;
+    borderCountryTag.href = `country.html?name=${borderCountry.name.common}`;
     //console.log(borderCountryTag)
     borderCountryList.append(borderCountryTag);
     })
