@@ -27,20 +27,29 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
     currencies.innerText = country.currencies ? Object.values(country.currencies)[0].name : null;
     languages.innerText = country.languages ? Object.values(country.languages).join(", ") : null;
 
+
+    if(country.borders) {
     country.borders.forEach((border) => {
     fetch(`https://restcountries.com/v3.1/alpha/${border}`)
     .then((res) => res.json())
     .then(([borderCountry]) => {
     //console.log(borderCountry.name.common)
-    const borderCountryTag = document.createElement('a')
-    borderCountryTag.classList.add("btn")
-    borderCountryTag.innerText = borderCountry.name.common
-    borderCountryTag.href = `country.html?name=${borderCountry.name.common}`
+    const borderCountryTag = document.createElement('a');
+    borderCountryTag.classList.add("btn");
+    borderCountryTag.innerText = borderCountry.name.common;
+    borderCountryTag.href = `REST-COUNTRIES-API/country.html?name=${borderCountry.name.common}`;
     //console.log(borderCountryTag)
-    borderCountryList.append(borderCountryTag)
+    borderCountryList.append(borderCountryTag);
     })
    })
-})
+    }else{
+        const noBorder = document.createElement('p');
+        noBorder.innerText = 'no border countries';
+        noBorder.classList.add("no-border");
+        borderCountryList.append(noBorder);
+    }
+    })
+
 
 
 

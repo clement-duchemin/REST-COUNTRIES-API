@@ -99,24 +99,28 @@ search.addEventListener("input", function() {
 
 //Dark mode
 
-const toggle = document.querySelector(".toggle");
-const moon = document.querySelector(".moon");
-const body = document.querySelector("#body");
-const header = document.querySelector("#header");
-const dropDown = document.getElementById('dropDown');
-const dropDown__list = document.querySelector(".dropDown__list");
-const searchBar = document.querySelector(".search-bar");
-const searchButton = document.querySelector(".search-button");
-const searchInput = document.querySelector(".search-input");
+ const toggle = document.querySelector(".toggle");
+// const moon = document.querySelector(".moon");
+// const body = document.querySelector("#body");
+// const header = document.querySelector("#header");
+// const dropDown = document.getElementById('dropDown');
+// const dropDown__list = document.querySelector(".dropDown__list");
+// const searchBar = document.querySelector(".search-bar");
+// const searchButton = document.querySelector(".search-button");
+// const searchInput = document.querySelector(".search-input");
 
-toggle.addEventListener("click", ()=> {
+// toggle.addEventListener("click", ()=> {
+//     body.classList.toggle("dark")
+//     header.classList.toggle("dark-blue")
+//     dropDown.classList.toggle("dark-blue")
+//     dropDown__list.classList.toggle("dark-blue")
+//     searchBar.classList.toggle("dark-blue")
+//     searchButton.classList.toggle("dark-blue")
+//     searchInput.classList.toggle("dark-blue")
+//     moon.classList.toggle("fas")
+//     toggle.classList.toggle("white")
+// })
+
+toggle.addEventListener("click", () => {
     body.classList.toggle("dark")
-    header.classList.toggle("dark-blue")
-    dropDown.classList.toggle("dark-blue")
-    dropDown__list.classList.toggle("dark-blue")
-    searchBar.classList.toggle("dark-blue")
-    searchButton.classList.toggle("dark-blue")
-    searchInput.classList.toggle("dark-blue")
-    moon.classList.toggle("fas")
-    toggle.classList.toggle("white")
 })
