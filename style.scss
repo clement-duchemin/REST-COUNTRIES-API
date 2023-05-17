@@ -6,23 +6,33 @@
 }
 
 body {
-    --background-color: hsl(0, 0%, 98%);
-    --text-color: hsl(200, 15%, 8%);
-    --elements-color: white;
-    background: var(--background-color);
-    color: var(--text-color);
-}
-
-body.dark {
-    --background-color: hsl(207, 26%, 17%);
-    --text-color: white;
-    --elements-color: hsl(209, 23%, 22%);
+    // --background-color: hsl(0, 0%, 98%);
+    // --text-color: hsl(200, 15%, 8%);
+    // --elements-color: white;
+    // background: var(--background-color);
+    // color: var(--text-color);
+    background-color: hsl(0, 0%, 98%);
 }
 
 // .dark {
-//     background: hsl(207, 26%, 17%);
-//     color: white;
+//     background-color: hsl(207, 26%, 17%);
 // }
+
+// body.dark {
+//     --background-color: hsl(207, 26%, 17%);
+//     --text-color: white;
+//     --elements-color: hsl(209, 23%, 22%);
+// }
+
+.dark {
+    background: hsl(207, 26%, 17%);
+    color: white;
+
+    & header {
+        background: hsl(209, 23%, 22%);
+
+    }
+}
 
 // .dark-blue {
 //     background: hsl(209, 23%, 22%);
@@ -41,6 +51,10 @@ header {
 
 h1 {
     font-size: 15px;
+}
+
+.toggle {
+    display: none;
 }
 
 button {
@@ -141,9 +155,9 @@ input {
     }
 }
 
-.dropDown__list.dark-blue {
-    background: hsl(207, 26%, 17%);
-}
+// .dropDown__list.dark-blue {
+//     background: hsl(207, 26%, 17%);
+// }
 
 
 #dropdownMenu {

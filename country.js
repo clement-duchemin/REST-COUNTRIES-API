@@ -49,7 +49,16 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
         borderCountryList.append(noBorder);
     }
     })
+//dark mode localstorage
 
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     const darkMode = localStorage.getItem('darkMode');
+    //     const body = document.querySelector('body');
+        
+    //     if (darkMode === 'true') {
+    //       body.classList.add('dark');
+    //     }
+    //   });
 
 
 

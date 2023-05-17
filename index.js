@@ -99,7 +99,7 @@ search.addEventListener("input", function() {
 
 //Dark mode
 
- const toggle = document.querySelector(".toggle");
+ //const toggle = document.querySelector(".toggle");
 // const moon = document.querySelector(".moon");
 // const body = document.querySelector("#body");
 // const header = document.querySelector("#header");
@@ -121,6 +121,26 @@ search.addEventListener("input", function() {
 //     toggle.classList.toggle("white")
 // })
 
+
+
+//  const switchBtn = document.querySelector(".toggle");
+//  const theme = "light";
+
+//  function changeMode(mode) {
+//     mode == "dark"
+//         ? document.body.classList.add("dark-theme")
+//         : document.body.classList.remove("dark-theme")
+//  }
+
+//  switchBtn.addEventListener("click", () => {
+//     theme = theme == "light" ? "dark" : "light";
+//     changeMode(theme);
+//     localStorage.setItem("theme", theme);
+//  })
+
+ const toggle = document.querySelector(".toggle");
+
 toggle.addEventListener("click", () => {
-    body.classList.toggle("dark")
-})
+  const isDarkMode = body.classList.toggle("dark")
+    localStorage.setItem("darkMode", isDarkMode)
+});

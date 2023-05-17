@@ -7,17 +7,15 @@
 }
 
 body {
-  --background-color: hsl(0, 0%, 98%);
-  --text-color: hsl(200, 15%, 8%);
-  --elements-color: white;
-  background: var(--background-color);
-  color: var(--text-color);
+  background-color: hsl(0, 0%, 98%);
 }
 
-body.dark {
-  --background-color: hsl(207, 26%, 17%);
-  --text-color: white;
-  --elements-color: hsl(209, 23%, 22%);
+.dark {
+  background: hsl(207, 26%, 17%);
+  color: white;
+}
+.dark header {
+  background: hsl(209, 23%, 22%);
 }
 
 header {
@@ -35,6 +33,10 @@ header {
 
 h1 {
   font-size: 15px;
+}
+
+.toggle {
+  display: none;
 }
 
 button {
@@ -149,10 +151,6 @@ input {
 .dropDown__list p {
   padding: 5px 0 5px 20px;
   cursor: pointer;
-}
-
-.dropDown__list.dark-blue {
-  background: hsl(207, 26%, 17%);
 }
 
 #dropdownMenu {
