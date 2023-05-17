@@ -27,7 +27,7 @@ function displayCountries(data) {
 </div>
 <div class="country__data">
     <h3 class="country__data--name">${data.name.common}</h3>
-    <p class="country__data--population"><strong>Population:</strong> ${data.population}</p>
+    <p class="country__data--population"><strong>Population:</strong> ${data.population.toLocaleString("en-US")}</p>
     <p class="country__data--region"><strong>Region:</strong> ${data.region}</p>
     <p class="country__data--capital"><strong>Capital:</strong> ${data.capital}</p>
 </div>`
@@ -56,10 +56,17 @@ toggleButton.addEventListener('click', function() {
 document.addEventListener("click", function(event) {
     const target = event.target;
 
-    if (target !== toggleButton && !dropdownMenu.contains(target)) {
+    if (target !== toggleButton && !dropdownMenu.contains(target) ) {
         dropdownMenu.style.display = 'none';
-    }
-})
+    };
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  
+    dropdownMenu.addEventListener("change", function() {
+        dropdownMenu.blur(); // Remove focus from the dropdown to close it
+    });
+  });
 
 
 
