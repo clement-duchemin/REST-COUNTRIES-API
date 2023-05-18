@@ -96,7 +96,7 @@ const countryName = document.getElementsByClassName("country__data--name");
 search.addEventListener("input", function() {
     console.log(search.value.toLowerCase());
     Array.from(countryName).forEach(elem => {
-        if(elem.innerText.toLowerCase().includes(search.value.toLowerCase())) {
+        if(elem.innerText.trim().toLowerCase().includes(search.value.trim().toLowerCase())) {
             elem.parentElement.parentElement.style.display="block"
         }else{
             elem.parentElement.parentElement.style.display="none"
