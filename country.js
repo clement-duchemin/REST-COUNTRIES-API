@@ -60,7 +60,10 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
     //     }
     //   });
 
-
+    let loader = document.querySelector(".loader");
+    window.addEventListener("load", function(){
+        loader.classList.add("close");
+    })
 
 
 

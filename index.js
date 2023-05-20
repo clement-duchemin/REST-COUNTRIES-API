@@ -151,3 +151,19 @@ toggle.addEventListener("click", () => {
   const isDarkMode = body.classList.toggle("dark")
     localStorage.setItem("darkMode", isDarkMode)
 });
+
+
+// Control Loading
+// function controlLoader(status = "close") {
+//     let loader = document.querySelector(".loader");
+//     if (status == "close") {
+//       loader.classList.add("close");
+//     } else {
+//       loader.classList.remove("close");
+//     }
+//   }
+
+let loader = document.querySelector(".loader");
+window.addEventListener("load", function(){
+loader.classList.add("close");
+})

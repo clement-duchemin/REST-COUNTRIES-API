@@ -18,6 +18,36 @@ body {
   background: hsl(209, 23%, 22%);
 }
 
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(200, 15%, 8%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9;
+  -webkit-transition: 0.9s linear, opacity 4s linear, visibility 0.4s linear;
+  -o-transition: 0.9s linear, opacity 4s linear, visibility 0.4s linear;
+  transition: 0.9s linear, opacity 4s linear, visibility 0.4s linear;
+}
+.loader.close {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader .spinner .icon {
+  font-size: 80px;
+  color: white;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
